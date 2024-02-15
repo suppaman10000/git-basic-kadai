@@ -1,0 +1,42 @@
+PS C:\Users\suppa> cd C:\GitHub_Tutorial
+PS C:\GitHub_Tutorial> mkdir git_challenge
+
+
+    ディレクトリ: C:\GitHub_Tutorial
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/02/15     15:50                git_challenge
+
+
+PS C:\GitHub_Tutorial> cd C:\GitHub_Tutorial\git_challenge
+PS C:\GitHub_Tutorial\git_challenge> echo "Hello, world!" hello_world.txt     
+Hello, world! 
+hello_world.txt
+PS C:\GitHub_Tutorial\git_challenge> git unit
+git: 'unit' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+PS C:\GitHub_Tutorial\git_challenge> git init
+Initialized empty Git repository in C:/GitHub_Tutorial/git_challenge/.git/
+PS C:\GitHub_Tutorial\git_challenge> git add hello_world.txt
+PS C:\GitHub_Tutorial\git_challenge> git commit -m "hello_world.txtを追加"
+[main (root-commit) 26ec698] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\GitHub_Tutorial\git_challenge> git checkout -b HEAD
+fatal: 'HEAD' is not a valid branch name
+PS C:\GitHub_Tutorial\git_challenge> git checkout -b main   
+fatal: a branch named 'main' already exists
+PS C:\GitHub_Tutorial\git_challenge> git checkout main
+Already on 'main'
+M       hello_world.txt
+PS C:\GitHub_Tutorial\git_challenge> git add hello_world.txt
+PS C:\GitHub_Tutorial\git_challenge> git commit -m "日本語訳を追記"
+[main b4b3663] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\GitHub_Tutorial\git_challenge> git log --oneline
+b4b3663 (HEAD -> main) 日本語訳を追記
+26ec698 hello_world.txtを追加
